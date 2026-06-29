@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin Martínez — Automatización & Agentes IA</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>⚡</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">KM<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links">
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <span class="hero__badge">Disponible para proyectos</span>
+      <h1 class="hero__title">
+        Automatizo procesos<br />
+        <span class="hero__highlight">con n8n + IA</span>
+      </h1>
+      <p class="hero__sub">
+        Creo sistemas que ahorran horas a tu equipo. Flujos n8n, agentes 
+        inteligentes, integraciones CRM, bots de trading MT5, y dashboards 
+        que funcionan solos.
+      </p>
+      <div class="hero__ctas">
+        <a href="#projects" class="btn btn--primary">Ver proyectos</a>
+        <a href="#contact" class="btn btn--ghost">Contactar</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><span class="stat__num">4+</span><span class="stat__label">Clientes</span></div>
+        <div class="stat"><span class="stat__num">n8n</span><span class="stat__label">Experto</span></div>
+        <div class="stat"><span class="stat__num">AI</span><span class="stat__label">Agents</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="section__header">
+      <h2>Casos de Estudio</h2>
+      <p>Cada proyecto cuenta un problema real, cómo lo resolví y el impacto medible.</p>
+    </div>
+
+    <!-- Project 1 -->
+    <article class="project">
+      <div class="project__number">01</div>
+      <div class="project__content">
+        <span class="project__tag">n8n · CRM</span>
+        <h3>Automatización de Prospectos & CRM</h3>
+        <div class="project__star">
+          <div class="star__block">
+            <h4>🎯 El Problema</h4>
+            <p>Un equipo comercial perdía <strong>10+ horas semanales</strong> copiando manualmente datos de formularios web al CRM. Los leads se enfriaban en el proceso y se colaban errores de tipeo.</p>
+          </div>
+          <div class="star__block">
+            <h4>⚙️ La Solución</h4>
+            <p>Diseñé un ecosistema en <strong>n8n</strong> con webhook que captura leads, los enriquece con datos públicos, clasifica la empresa y registra automáticamente en el CRM con alerta por WhatsApp al vendedor.</p>
+          </div>
+          <div class="star__block">
+            <h4>📊 El Impacto</h4>
+            <ul>
+              <li>✅ <strong>95% menos errores</strong> de captura</li>
+              <li>✅ <strong>40h/mes</strong> recuperadas para el equipo</li>
+              <li>✅ Leads asignados en <strong>&lt;30 segundos</strong></li>
+            </ul>
+          </div>
+          <!-- demo video placeholder -->
+          <div class="star__video">
+            <div class="video-placeholder">
+              <span class="video-placeholder__icon">▶</span>
+              <span>Demo del flujo — <em>subir video a YouTube</em></span>
+            </div>
+          </div>
+        </div>
+        <div class="project__tech">
+          <span class="tech-badge">n8n</span>
+          <span class="tech-badge">HubSpot API</span>
+          <span class="tech-badge">Webhooks</span>
+          <span class="tech-badge">WhatsApp</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project">
+      <div class="project__number">02</div>
+      <div class="project__content">
+        <span class="project__tag">n8n · IA · RAG</span>
+        <h3>Agente de Soporte Inteligente con RAG</h3>
+        <div class="project__star">
+          <div class="star__block">
+            <h4>🎯 El Problema</h4>
+            <p>Un departamento de soporte recibía <strong>200+ tickets/día</strong> con preguntas repetitivas. El equipo no daba abasto y los tiempos de respuesta se disparaban a más de 24h.</p>
+          </div>
+          <div class="star__block">
+            <h4>⚙️ La Solución</h4>
+            <p>Implementé un <strong>agente RAG local</strong> con n8n + Ollama + base vectorial. El sistema clasifica cada ticket por urgencia, busca en la base de conocimiento interna y redacta un borrador de respuesta automático.</p>
+          </div>
+          <div class="star__block">
+            <h4>📊 El Impacto</h4>
+            <ul>
+              <li>✅ <strong>70% de tickets</strong> resueltos sin intervención humana</li>
+              <li>✅ Respuesta inicial en <strong>&lt;2 minutos</strong></li>
+              <li>✅ <strong>0$ en costos de nube</strong> (todo local)</li>
+            </ul>
+          </div>
+          <div class="star__video">
+            <div class="video-placeholder">
+              <span class="video-placeholder__icon">▶</span>
+              <span>Demo del agente RAG — <em>subir video a YouTube</em></span>
+            </div>
+          </div>
+        </div>
+        <div class="project__tech">
+          <span class="tech-badge">n8n</span>
+          <span class="tech-badge">Ollama</span>
+          <span class="tech-badge">Qdrant</span>
+          <span class="tech-badge">LangChain</span>
+          <span class="tech-badge">RAG</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project">
+      <div class="project__number">03</div>
+      <div class="project__content">
+        <span class="project__tag">Trading · MT5 · Automatización</span>
+        <h3>Bot de Trading Automatizado USDJPY</h3>
+        <div class="project__star">
+          <div class="star__block">
+            <h4>🎯 El Problema</h4>
+            <p>Operar manualmente USDJPY requería estar pegado a la pantalla 8h/día. Las emociones arruinaban las entradas y salidas, y no había consistencia en la estrategia.</p>
+          </div>
+          <div class="star__block">
+            <h4>⚙️ La Solución</h4>
+            <p>Diseñé un bot en <strong>MT5 (MQL5)</strong> con estrategia ATR + HH/HL, risk management automático con R:R 1:3, y un sistema de monitoreo vía Python que ejecuta ciclos cada 4h con paper trading primero.</p>
+          </div>
+          <div class="star__block">
+            <h4>📊 El Impacto</h4>
+            <ul>
+              <li>✅ Primer live demo en <strong>junio 2026</strong></li>
+              <li>✅ Estrategia <strong>backtesteada y validada</strong></li>
+              <li>✅ Ejecución fría — <strong>0 intervención emocional</strong></li>
+            </ul>
+          </div>
+          <div class="star__video">
+            <div class="video-placeholder">
+              <span class="video-placeholder__icon">▶</span>
+              <span>Demo del bot — <em>subir video a YouTube</em></span>
+            </div>
+          </div>
+        </div>
+        <div class="project__tech">
+          <span class="tech-badge">MQL5</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">MT5</span>
+          <span class="tech-badge">ATR Strategy</span>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <div class="section__header">
+      <h2>Tecnologías</h2>
+      <p>Lo que uso para construir cada solución.</p>
+    </div>
+    <div class="skills__grid">
+      <div class="skill-card">
+        <div class="skill-card__icon">⚡</div>
+        <h4>n8n</h4>
+        <p>Automatización visual, webhooks, APIs, integración con 300+ servicios</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__icon">🧠</div>
+        <h4>IA & RAG</h4>
+        <p>Ollama, LangChain, bases vectoriales, AnythingLLM, pipelines RAG locales</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__icon">🔄</div>
+        <h4>CRMs</h4>
+        <p>HubSpot, Pipedrive, Salesforce — integración, enriquecimiento y scoring</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__icon">📊</div>
+        <h4>Trading</h4>
+        <p>Bots MT5/MQL5, estrategias automatizadas, backtesting, risk management</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__icon">🐍</div>
+        <h4>Python</h4>
+        <p>Scripts, APIs, procesamiento de datos, PyInstaller, automatización Windows</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card__icon">💬</div>
+        <h4>WhatsApp API</h4>
+        <p>Evolution API, n8n + WhatsApp, chatbots inteligentes, envío masivo inteligente</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="section__header">
+      <h2>¿Tienes un proyecto?</h2>
+      <p>Hablemos de cómo puedo automatizar tu proceso.</p>
+    </div>
+    <div class="contact__cards">
+      <a href="https://www.fiverr.com/kenez_andrew" target="_blank" class="contact-card">
+        <span class="contact-card__icon">🟢</span>
+        <span class="contact-card__label">Fiverr</span>
+        <span class="contact-card__sub">kenez_andrew</span>
+      </a>
+      <a href="https://linkedin.com/in/kevin-andres-martinez-perez-b04a7b1b9" target="_blank" class="contact-card">
+        <span class="contact-card__icon">💼</span>
+        <span class="contact-card__label">LinkedIn</span>
+        <span class="contact-card__sub">Kevin Martínez</span>
+      </a>
+      <a href="https://github.com/Kenez17" target="_blank" class="contact-card">
+        <span class="contact-card__icon">🐙</span>
+        <span class="contact-card__label">GitHub</span>
+        <span class="contact-card__sub">Kenez17</span>
+      </a>
+      <div class="contact-card contact-card--disabled">
+        <span class="contact-card__icon">📧</span>
+        <span class="contact-card__label">Email</span>
+        <span class="contact-card__sub">Disponible bajo solicitud</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Kevin Martínez — Automatización & Agentes IA</p>
+    <p class="footer__note">Construido con 💻 desde Colombia</p>
+  </footer>
+
+</body>
+</html>
