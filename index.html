@@ -3,277 +3,565 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kevin Martínez — Automatización & Agentes IA</title>
+  <title>Kevin AI Solutions — Automatización & IA</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>⚡</text></svg>" />
   <link rel="stylesheet" href="style.css" />
-  <!-- Lucide Icons -->
+  <!-- Lucide -->
   <script src="https://unpkg.com/lucide@latest" defer></script>
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#hero" class="nav__logo">KM<span class="nav__logo-dot">.</span></a>
+      <a href="#hero" class="nav__logo">Kevin<span class="nav__logo-dot">AI</span></a>
       <ul class="nav__links">
         <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#tech">Tecnologías</a></li>
+        <li><a href="#about">Sobre mí</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
+      <a href="#contact" class="btn btn--small btn--primary">Agendar llamada</a>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero" class="hero" data-aos="fade-in">
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
     <div class="hero__bg"></div>
-    <div class="hero__content" data-aos="fade-up" data-aos-duration="1000">
-      <span class="hero__badge">Disponible para proyectos</span>
-      <h1 class="hero__title">
-        Automatizo procesos<br />
-        <span class="hero__highlight">con n8n + IA</span>
+    <div class="hero__content">
+      <span class="hero__badge" id="heroBadge">Automatización + IA</span>
+      <h1 class="hero__title" id="heroTitle">
+        Automatizamos procesos<br />
+        <span class="hero__highlight">empresariales mediante IA</span>
       </h1>
-      <p class="hero__sub">
-        Creo sistemas que ahorran horas a tu equipo. Flujos n8n, agentes 
-        inteligentes, integraciones CRM, bots de trading MT5, y dashboards 
-        que funcionan solos.
+      <p class="hero__sub" id="heroSub">
+        Ayudo a empresas y emprendedores a automatizar tareas repetitivas 
+        utilizando Inteligencia Artificial, APIs y herramientas No-Code/Low-Code. 
+        Desarrollo soluciones que <strong>ahorran tiempo, reducen costos y mejoran procesos</strong>.
       </p>
-      <div class="hero__ctas">
+      <div class="hero__ctas" id="heroCtas">
         <a href="#projects" class="btn btn--primary">Ver proyectos</a>
-        <a href="#contact" class="btn btn--ghost">Contactar</a>
+        <a href="#about" class="btn btn--ghost">Sobre mí</a>
+        <a href="https://calendly.com/andresperez171998" target="_blank" class="btn btn--ghost">
+          <i data-lucide="calendar" class="btn__icon"></i> Agendar llamada
+        </a>
       </div>
-      <div class="hero__stats">
-        <div class="stat"><span class="stat__num">4+</span><span class="stat__label">Clientes</span></div>
+      <div class="hero__stats" id="heroStats">
+        <div class="stat"><span class="stat__num">4+</span><span class="stat__label">Proyectos entregados</span></div>
         <div class="stat"><span class="stat__num">n8n</span><span class="stat__label">Experto</span></div>
         <div class="stat"><span class="stat__num">AI</span><span class="stat__label">Agents</span></div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="projects" data-aos="fade-up">
-    <div class="section__header">
-      <h2>Casos de Estudio</h2>
-      <p>Cada proyecto cuenta un problema real, cómo lo resolví y el impacto medible.</p>
-    </div>
-
-    <!-- Project 1 -->
-    <article class="project" data-aos="fade-up" data-aos-delay="100">
-      <div class="project__number">01</div>
-      <div class="project__content">
-        <span class="project__tag">n8n · CRM</span>
-        <h3>Automatización de Prospectos & CRM</h3>
-        <div class="project__star">
-          <div class="star__block">
-            <h4><i data-lucide="target" class="star__icon"></i> El Problema</h4>
-            <p>Un equipo comercial perdía <strong>10+ horas semanales</strong> copiando manualmente datos de formularios web al CRM. Los leads se enfriaban en el proceso y se colaban errores de tipeo.</p>
+  <!-- ===== ABOUT (mini) ===== -->
+  <section id="about" class="about">
+    <div class="about__inner">
+      <div class="about__text" data-anim="fade-right">
+        <span class="section__label">Sobre mí</span>
+        <h2>De la necesidad a la solución</h2>
+        <p>
+          Todo empezó cuando vi equipos perdiendo horas en tareas que una máquina podía hacer en segundos. 
+          Hoy desarrollo sistemas de automatización con <strong>n8n, IA y Python</strong> que conectan 
+          CRMs, WhatsApp, bases de datos y APIs para que las empresas funcionen solas.
+        </p>
+        <p>
+          Trabajo con tecnologías como <strong>DeepSeek, OpenAI, Ollama, PostgreSQL</strong> y 
+          herramientas No-Code para construir desde bots conversacionales hasta sistemas de 
+          visión por computador y trading automatizado.
+        </p>
+        <div class="about__highlights">
+          <div class="about__hl">
+            <i data-lucide="bot" class="about__hl-icon"></i>
+            <span>Agentes inteligentes</span>
           </div>
-          <div class="star__block">
-            <h4><i data-lucide="settings-2" class="star__icon"></i> La Solución</h4>
-            <p>Diseñé un ecosistema en <strong>n8n</strong> con webhook que captura leads, los enriquece con datos públicos, clasifica la empresa y registra automáticamente en el CRM con alerta por WhatsApp al vendedor.</p>
+          <div class="about__hl">
+            <i data-lucide="zap" class="about__hl-icon"></i>
+            <span>Automatización de procesos</span>
           </div>
-          <div class="star__block">
-            <h4><i data-lucide="bar-chart-3" class="star__icon"></i> El Impacto</h4>
-            <ul>
-              <li><i data-lucide="check-check" class="check-icon"></i> <strong>95% menos errores</strong> de captura</li>
-              <li><i data-lucide="check-check" class="check-icon"></i> <strong>40h/mes</strong> recuperadas para el equipo</li>
-              <li><i data-lucide="check-check" class="check-icon"></i> Leads asignados en <strong>&lt;30 segundos</strong></li>
-            </ul>
+          <div class="about__hl">
+            <i data-lucide="bar-chart-3" class="about__hl-icon"></i>
+            <span>Dashboards</span>
           </div>
-          <!-- demo video placeholder -->
-          <div class="star__video">
-            <div class="video-placeholder">
-              <i data-lucide="play-circle" class="video-placeholder__icon"></i>
-              <span>Demo del flujo — <em>subir video a YouTube</em></span>
-            </div>
+          <div class="about__hl">
+            <i data-lucide="brain-circuit" class="about__hl-icon"></i>
+            <span>IA personalizada</span>
+          </div>
+          <div class="about__hl">
+            <i data-lucide="workflow" class="about__hl-icon"></i>
+            <span>Integraciones API</span>
+          </div>
+          <div class="about__hl">
+            <i data-lucide="cloud" class="about__hl-icon"></i>
+            <span>Soluciones en la nube</span>
           </div>
         </div>
-        <div class="project__tech">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="projects">
+    <div class="section__header" data-anim="fade-up">
+      <span class="section__label">Proyectos</span>
+      <h2>Casos de éxito</h2>
+      <p>Cada automatización nace de un problema real. Así los resolví.</p>
+    </div>
+
+    <!-- PROJECT 1: Ventas Automáticas -->
+    <article class="project-card" data-anim="fade-up">
+      <div class="project-card__side">
+        <span class="project-card__number">01</span>
+        <span class="project-card__tag">Comercio Conversacional IA</span>
+        <h3>Asistente de Ventas Automático</h3>
+        <p class="project-card__desc">
+          Sistema de comercio conversacional impulsado por IA que atiende clientes 
+          por WhatsApp, muestra productos, resuelve dudas y cierra ventas sin intervención humana.
+        </p>
+        
+        <div class="project-card__blocks">
+          <div class="project-card__block">
+            <h4><i data-lucide="circle-alert" class="block-icon"></i> Problema</h4>
+            <p>Un negocio recibía decenas de consultas diarias por WhatsApp que un vendedor humano no podía atender en tiempo real, perdiendo clientes por demora en la respuesta.</p>
+          </div>
+          <div class="project-card__block">
+            <h4><i data-lucide="settings-2" class="block-icon"></i> Solución</h4>
+            <p>Flujo en n8n que recibe mensajes, clasifica la intención con IA (DeepSeek), consulta un catálogo en Airtable, y genera respuestas personalizadas — todo por WhatsApp vía Evolution API.</p>
+          </div>
+          <div class="project-card__block">
+            <h4><i data-lucide="bar-chart-3" class="block-icon"></i> Resultado</h4>
+            <ul class="project-card__results">
+              <li><i data-lucide="check" class="check-icon"></i> Atención 24/7 automatizada</li>
+              <li><i data-lucide="check" class="check-icon"></i> Clasificación inteligente de prospectos</li>
+              <li><i data-lucide="check" class="check-icon"></i> Integración directa con WhatsApp</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card__tech">
           <span class="tech-badge">n8n</span>
-          <span class="tech-badge">HubSpot API</span>
-          <span class="tech-badge">Webhooks</span>
+          <span class="tech-badge">DeepSeek</span>
+          <span class="tech-badge">Evolution API</span>
+          <span class="tech-badge">Airtable</span>
           <span class="tech-badge">WhatsApp</span>
         </div>
+
+        <div class="project-card__videos">
+          <button class="video-btn" data-video-id="video1-proj1">
+            <i data-lucide="play-circle" class="video-btn__icon"></i>
+            Ver demo
+          </button>
+        </div>
       </div>
     </article>
 
-    <!-- Project 2 -->
-    <article class="project" data-aos="fade-up" data-aos-delay="200">
-      <div class="project__number">02</div>
-      <div class="project__content">
-        <span class="project__tag">n8n · IA · RAG</span>
-        <h3>Agente de Soporte Inteligente con RAG</h3>
-        <div class="project__star">
-          <div class="star__block">
-            <h4><i data-lucide="target" class="star__icon"></i> El Problema</h4>
-            <p>Un departamento de soporte recibía <strong>200+ tickets/día</strong> con preguntas repetitivas. El equipo no daba abasto y los tiempos de respuesta se disparaban a más de 24h.</p>
+    <!-- PROJECT 2: Narración Deportiva IA + Visión -->
+    <article class="project-card" data-anim="fade-up">
+      <div class="project-card__side">
+        <span class="project-card__number">02</span>
+        <span class="project-card__tag">IA · Visión · Deportes</span>
+        <h3>Narrador Automático de Fútbol + Detección Visual</h3>
+        <p class="project-card__desc">
+          Sistema híbrido que combina un panel de narración asistido por IA con un 
+          detector de eventos por visión computacional. Genera narraciones en tiempo 
+          real de partidos de fútbol con intervención humana reducida al mínimo.
+        </p>
+
+        <div class="project-card__blocks">
+          <div class="project-card__block">
+            <h4><i data-lucide="circle-alert" class="block-icon"></i> Problema</h4>
+            <p>Un canal de streaming deportivo necesitaba narración profesional para sus transmisiones, pero contratar un relator por partido resultaba costoso e insostenible para eventos de ligas menores.</p>
           </div>
-          <div class="star__block">
-            <h4><i data-lucide="settings-2" class="star__icon"></i> La Solución</h4>
-            <p>Implementé un <strong>agente RAG local</strong> con n8n + Ollama + base vectorial. El sistema clasifica cada ticket por urgencia, busca en la base de conocimiento interna y redacta un borrador de respuesta automático.</p>
+          <div class="project-card__block">
+            <h4><i data-lucide="settings-2" class="block-icon"></i> Solución</h4>
+            <p><strong>Panel de narración IA</strong> (n8n + DeepSeek): el operador describe una jugada y el sistema genera narración natural con tono, emoción y contexto. <strong>Vision_Futbol</strong> (YOLOv8 + Python): detecta automáticamente eventos como goles, tiros de esquina y jugadas peligrosas, reduciendo la carga del operador.</p>
           </div>
-          <div class="star__block">
-            <h4><i data-lucide="bar-chart-3" class="star__icon"></i> El Impacto</h4>
-            <ul>
-              <li><i data-lucide="check-check" class="check-icon"></i> <strong>70% de tickets</strong> resueltos sin intervención humana</li>
-              <li><i data-lucide="check-check" class="check-icon"></i> Respuesta inicial en <strong>&lt;2 minutos</strong></li>
-              <li><i data-lucide="check-check" class="check-icon"></i> <strong>0$ en costos de nube</strong> (todo local)</li>
+          <div class="project-card__block">
+            <h4><i data-lucide="bar-chart-3" class="block-icon"></i> Resultado</h4>
+            <ul class="project-card__results">
+              <li><i data-lucide="check" class="check-icon"></i> Narración profesional en segundos</li>
+              <li><i data-lucide="check" class="check-icon"></i> Detección automática de eventos clave</li>
+              <li><i data-lucide="check" class="check-icon"></i> Stack 100% local (sin costos de nube)</li>
             </ul>
           </div>
-          <div class="star__video">
-            <div class="video-placeholder">
-              <i data-lucide="play-circle" class="video-placeholder__icon"></i>
-              <span>Demo del agente RAG — <em>subir video a YouTube</em></span>
-            </div>
-          </div>
         </div>
-        <div class="project__tech">
+
+        <div class="project-card__tech">
           <span class="tech-badge">n8n</span>
-          <span class="tech-badge">Ollama</span>
-          <span class="tech-badge">Qdrant</span>
-          <span class="tech-badge">LangChain</span>
-          <span class="tech-badge">RAG</span>
+          <span class="tech-badge">DeepSeek</span>
+          <span class="tech-badge">YOLOv8</span>
+          <span class="tech-badge">OpenCV</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">TTS</span>
+        </div>
+
+        <div class="project-card__videos">
+          <button class="video-btn" data-video-id="video1-proj2">
+            <i data-lucide="play-circle" class="video-btn__icon"></i>
+            Demo completa (Narración + Visión)
+          </button>
+          <button class="video-btn video-btn--outline" data-video-id="video2-proj2">
+            <i data-lucide="code" class="video-btn__icon"></i>
+            Video técnico (Detección de eventos)
+          </button>
         </div>
       </div>
     </article>
 
-    <!-- Project 3 -->
-    <article class="project" data-aos="fade-up" data-aos-delay="300">
-      <div class="project__number">03</div>
-      <div class="project__content">
-        <span class="project__tag">Trading · MT5 · Automatización</span>
-        <h3>Bot de Trading Automatizado USDJPY</h3>
-        <div class="project__star">
-          <div class="star__block">
-            <h4><i data-lucide="target" class="star__icon"></i> El Problema</h4>
-            <p>Operar manualmente USDJPY requería estar pegado a la pantalla 8h/día. Las emociones arruinaban las entradas y salidas, y no había consistencia en la estrategia.</p>
+    <!-- PROJECT 3: Staff Coordination -->
+    <article class="project-card" data-anim="fade-up">
+      <div class="project-card__side">
+        <span class="project-card__number">03</span>
+        <span class="project-card__tag">Automatización · RRHH</span>
+        <h3>Sistema de Coordinación de Personal</h3>
+        <p class="project-card__desc">
+          Plataforma de gestión de eventos y coordinación de personal vía WhatsApp. 
+          Automatiza invitaciones, confirmaciones, listas de espera y notificaciones 
+          para equipos de trabajo en eventos.
+        </p>
+
+        <div class="project-card__blocks">
+          <div class="project-card__block">
+            <h4><i data-lucide="circle-alert" class="block-icon"></i> Problema</h4>
+            <p>Una empresa de staffing perdía horas llamando uno por uno a trabajadores para confirmar disponibilidad, manejando planillas en Excel y WhatsApp de forma desorganizada.</p>
           </div>
-          <div class="star__block">
-            <h4><i data-lucide="settings-2" class="star__icon"></i> La Solución</h4>
-            <p>Diseñé un bot en <strong>MT5 (MQL5)</strong> con estrategia ATR + HH/HL, risk management automático con R:R 1:3, y un sistema de monitoreo vía Python que ejecuta ciclos cada 4h con paper trading primero.</p>
+          <div class="project-card__block">
+            <h4><i data-lucide="settings-2" class="block-icon"></i> Solución</h4>
+            <p>Flujo en n8n + Evolution API + Airtable que envía invitaciones por WhatsApp, procesa respuestas SI/NO, gestiona listas de espera, y notifica al administrador — todo desde un panel web con dashboard en tiempo real.</p>
           </div>
-          <div class="star__block">
-            <h4><i data-lucide="bar-chart-3" class="star__icon"></i> El Impacto</h4>
-            <ul>
-              <li><i data-lucide="check-check" class="check-icon"></i> Primer live demo en <strong>junio 2026</strong></li>
-              <li><i data-lucide="check-check" class="check-icon"></i> Estrategia <strong>backtesteada y validada</strong></li>
-              <li><i data-lucide="check-check" class="check-icon"></i> Ejecución fría — <strong>0 intervención emocional</strong></li>
+          <div class="project-card__block">
+            <h4><i data-lucide="bar-chart-3" class="block-icon"></i> Resultado</h4>
+            <ul class="project-card__results">
+              <li><i data-lucide="check" class="check-icon"></i> Confirmaciones en segundos vs horas</li>
+              <li><i data-lucide="check" class="check-icon"></i> Gestión automática de lista de espera</li>
+              <li><i data-lucide="check" class="check-icon"></i> Panel web con dashboard en vivo</li>
             </ul>
           </div>
-          <div class="star__video">
-            <div class="video-placeholder">
-              <i data-lucide="play-circle" class="video-placeholder__icon"></i>
-              <span>Demo del bot — <em>subir video a YouTube</em></span>
-            </div>
-          </div>
         </div>
-        <div class="project__tech">
-          <span class="tech-badge">MQL5</span>
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">MT5</span>
-          <span class="tech-badge">ATR Strategy</span>
+
+        <div class="project-card__tech">
+          <span class="tech-badge">n8n</span>
+          <span class="tech-badge">Evolution API</span>
+          <span class="tech-badge">Airtable</span>
+          <span class="tech-badge">WhatsApp</span>
+          <span class="tech-badge">HTML/CSS</span>
+        </div>
+
+        <div class="project-card__videos">
+          <button class="video-btn" data-video-id="video1-proj3">
+            <i data-lucide="play-circle" class="video-btn__icon"></i>
+            Ver demo del sistema
+          </button>
         </div>
       </div>
     </article>
 
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills" data-aos="fade-up">
-    <div class="section__header">
+  <!-- ===== TECHNOLOGIES ===== -->
+  <section id="tech" class="tech">
+    <div class="section__header" data-anim="fade-up">
+      <span class="section__label">Stack</span>
       <h2>Tecnologías</h2>
-      <p>Lo que uso para construir cada solución.</p>
+      <p>Las herramientas que uso para construir cada solución.</p>
     </div>
-    <div class="skills__grid">
-      <div class="skill-card" data-aos="zoom-in" data-aos-delay="0">
-        <div class="skill-card__icon"><i data-lucide="zap"></i></div>
-        <h4>n8n</h4>
-        <p>Automatización visual, webhooks, APIs, integración con 300+ servicios</p>
+
+    <div class="tech__grid">
+      <div class="tech-cat" data-anim="fade-up">
+        <div class="tech-cat__head">
+          <i data-lucide="brain-circuit" class="tech-cat__icon"></i>
+          <h3>IA</h3>
+        </div>
+        <div class="tech-cat__items">
+          <span>DeepSeek</span><span>OpenAI / GPT</span><span>Claude</span><span>Gemini</span><span>Ollama</span><span>LangChain</span>
+        </div>
       </div>
-      <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-        <div class="skill-card__icon"><i data-lucide="brain-circuit"></i></div>
-        <h4>IA & RAG</h4>
-        <p>Ollama, LangChain, bases vectoriales, AnythingLLM, pipelines RAG locales</p>
+      <div class="tech-cat" data-anim="fade-up" data-delay="100">
+        <div class="tech-cat__head">
+          <i data-lucide="zap" class="tech-cat__icon"></i>
+          <h3>Automatización</h3>
+        </div>
+        <div class="tech-cat__items">
+          <span>n8n</span><span>Make</span><span>Zapier</span>
+        </div>
       </div>
-      <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-        <div class="skill-card__icon"><i data-lucide="workflow"></i></div>
-        <h4>CRMs</h4>
-        <p>HubSpot, Pipedrive, Salesforce — integración, enriquecimiento y scoring</p>
+      <div class="tech-cat" data-anim="fade-up" data-delay="200">
+        <div class="tech-cat__head">
+          <i data-lucide="code-xml" class="tech-cat__icon"></i>
+          <h3>Backend</h3>
+        </div>
+        <div class="tech-cat__items">
+          <span>Python</span><span>FastAPI</span><span>Node.js</span><span>MQL5</span>
+        </div>
       </div>
-      <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-        <div class="skill-card__icon"><i data-lucide="trending-up"></i></div>
-        <h4>Trading</h4>
-        <p>Bots MT5/MQL5, estrategias automatizadas, backtesting, risk management</p>
+      <div class="tech-cat" data-anim="fade-up" data-delay="300">
+        <div class="tech-cat__head">
+          <i data-lucide="database" class="tech-cat__icon"></i>
+          <h3>Bases de datos</h3>
+        </div>
+        <div class="tech-cat__items">
+          <span>PostgreSQL</span><span>Supabase</span><span>Airtable</span><span>Firebase</span><span>Qdrant</span>
+        </div>
       </div>
-      <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
-        <div class="skill-card__icon"><i data-lucide="code-xml"></i></div>
-        <h4>Python</h4>
-        <p>Scripts, APIs, procesamiento de datos, PyInstaller, automatización Windows</p>
+      <div class="tech-cat" data-anim="fade-up" data-delay="400">
+        <div class="tech-cat__head">
+          <i data-lucide="link" class="tech-cat__icon"></i>
+          <h3>APIs & Servicios</h3>
+        </div>
+        <div class="tech-cat__items">
+          <span>Evolution API</span><span>WhatsApp</span><span>Google</span><span>Slack</span><span>HubSpot</span>
+        </div>
       </div>
-      <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
-        <div class="skill-card__icon"><i data-lucide="message-square-text"></i></div>
-        <h4>WhatsApp API</h4>
-        <p>Evolution API, n8n + WhatsApp, chatbots inteligentes, envío masivo inteligente</p>
+      <div class="tech-cat" data-anim="fade-up" data-delay="500">
+        <div class="tech-cat__head">
+          <i data-lucide="monitor" class="tech-cat__icon"></i>
+          <h3>Visión & Trading</h3>
+        </div>
+        <div class="tech-cat__items">
+          <span>YOLOv8</span><span>OpenCV</span><span>MT5</span><span>Tkinter</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact" data-aos="fade-up">
+  <!-- ===== CALENDLY ===== -->
+  <section id="schedule" class="schedule" data-anim="fade-up">
     <div class="section__header">
-      <h2>¿Tienes un proyecto?</h2>
-      <p>Hablemos de cómo puedo automatizar tu proceso.</p>
+      <span class="section__label">Agenda</span>
+      <h2>Agendemos una llamada</h2>
+      <p>Sin compromiso. Conversemos sobre tu proyecto y te diré cómo puedo ayudarte.</p>
     </div>
-    <div class="contact__cards">
-      <a href="https://www.fiverr.com/kenez_andrew" target="_blank" class="contact-card" data-aos="fade-up" data-aos-delay="0">
-        <span class="contact-card__icon"><i data-lucide="briefcase"></i></span>
-        <span class="contact-card__label">Fiverr</span>
-        <span class="contact-card__sub">kenez_andrew</span>
-      </a>
-      <a href="https://linkedin.com/in/kevin-andres-martinez-perez-b04a7b1b9" target="_blank" class="contact-card" data-aos="fade-up" data-aos-delay="100">
-        <span class="contact-card__icon"><i data-lucide="linkedin"></i></span>
-        <span class="contact-card__label">LinkedIn</span>
-        <span class="contact-card__sub">Kevin Martínez</span>
-      </a>
-      <a href="https://github.com/Kenez17" target="_blank" class="contact-card" data-aos="fade-up" data-aos-delay="200">
-        <span class="contact-card__icon"><i data-lucide="github"></i></span>
-        <span class="contact-card__label">GitHub</span>
-        <span class="contact-card__sub">Kenez17</span>
-      </a>
-      <div class="contact-card contact-card--disabled" data-aos="fade-up" data-aos-delay="300">
-        <span class="contact-card__icon"><i data-lucide="mail"></i></span>
-        <span class="contact-card__label">Email</span>
-        <span class="contact-card__sub">Disponible bajo solicitud</span>
+    <div class="schedule__embed">
+      <!-- Calendly inline widget -->
+      <div class="calendly-placeholder">
+        <i data-lucide="calendar" class="calendly-icon"></i>
+        <p>¿Prefieres que te contacte yo? <a href="#contact" class="link">Escríbeme directo</a></p>
+        <a href="https://calendly.com/andresperez171998" target="_blank" class="btn btn--primary">
+          <i data-lucide="external-link" class="btn__icon"></i> Abrir Calendly
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact" data-anim="fade-up">
+    <div class="section__header">
+      <span class="section__label">Contacto</span>
+      <h2>Hablemos de tu proyecto</h2>
+      <p>Cuéntame qué necesitas y te respondo en máximo 24h.</p>
+    </div>
+
+    <div class="contact__grid">
+      <div class="contact__form">
+        <form id="contactForm">
+          <div class="form__group">
+            <label for="formName">Nombre</label>
+            <input type="text" id="formName" placeholder="Tu nombre" required />
+          </div>
+          <div class="form__group">
+            <label for="formEmail">Email</label>
+            <input type="email" id="formEmail" placeholder="tu@email.com" required />
+          </div>
+          <div class="form__group">
+            <label for="formMsg">¿En qué puedo ayudarte?</label>
+            <textarea id="formMsg" rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <i data-lucide="send" class="btn__icon"></i> Enviar mensaje
+          </button>
+        </form>
+      </div>
+
+      <div class="contact__channels">
+        <a href="https://wa.me/573053544631?text=Hola%20Kevin%2C%20vi%20tu%20portafolio%20y%20quiero%20consultarte" target="_blank" class="contact-channel">
+          <i data-lucide="message-circle" class="channel-icon channel-icon--wa"></i>
+          <span class="channel__label">WhatsApp</span>
+          <span class="channel__sub">+57 305 354 4631</span>
+        </a>
+        <a href="https://linkedin.com/in/kevin-andres-martinez-perez-b04a7b1b9" target="_blank" class="contact-channel">
+          <i data-lucide="linkedin" class="channel-icon channel-icon--li"></i>
+          <span class="channel__label">LinkedIn</span>
+          <span class="channel__sub">Kevin Martínez</span>
+        </a>
+        <a href="https://github.com/Kenez17" target="_blank" class="contact-channel">
+          <i data-lucide="github" class="channel-icon channel-icon--gh"></i>
+          <span class="channel__label">GitHub</span>
+          <span class="channel__sub">Kenez17</span>
+        </a>
+        <a href="https://www.fiverr.com/kenez_andrew" target="_blank" class="contact-channel">
+          <i data-lucide="briefcase" class="channel-icon channel-icon--fi"></i>
+          <span class="channel__label">Fiverr</span>
+          <span class="channel__sub">kenez_andrew</span>
+        </a>
+        <div class="contact-channel contact-channel--disabled">
+          <i data-lucide="mail" class="channel-icon channel-icon--mail"></i>
+          <span class="channel__label">Email</span>
+          <span class="channel__sub">Disponible bajo solicitud</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>© 2026 Kevin Martínez — Automatización & Agentes IA</p>
-    <p class="footer__note">Construido con <i data-lucide="laptop" class="footer__icon"></i> desde Colombia</p>
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">Kevin<span class="nav__logo-dot">AI</span> Solutions</span>
+        <p>Automatizamos procesos empresariales mediante IA.</p>
+      </div>
+      <div class="footer__tagline">
+        <p>© 2026 Kevin Martínez — Automatización & Agentes IA</p>
+        <p class="footer__note">Hecho con <i data-lucide="heart" class="footer__heart"></i> desde Colombia</p>
+      </div>
+    </div>
   </footer>
 
-</body>
-<script>
-  // Initialize Lucide icons
+  <!-- ===== MODAL DE VIDEO ===== -->
+  <div class="modal" id="videoModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal__video" id="modalVideoContainer">
+        <div class="video-placeholder-inner">
+          <i data-lucide="film" class="vp-icon"></i>
+          <p>Video no cargado</p>
+          <p class="vp-sub">Cuando subas tu video a YouTube, reemplazaremos este placeholder.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
   document.addEventListener('DOMContentLoaded', function() {
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
-    }
-  });
-  // Initialize AOS animations
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 600,
-        once: true,
-        offset: 80,
-        easing: 'ease-out-cubic'
+    // === LUCIDE ===
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    // === GSAP + SCROLLTRIGGER ===
+    function initGSAP() {
+      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Hero stagger
+      const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      heroTl.from('#heroBadge', { y: 30, opacity: 0, duration: 0.6 })
+            .from('#heroTitle', { y: 40, opacity: 0, duration: 0.7 }, '-=0.3')
+            .from('#heroSub', { y: 30, opacity: 0, duration: 0.6 }, '-=0.4')
+            .from('#heroCtas a', { y: 20, opacity: 0, stagger: 0.12, duration: 0.5 }, '-=0.3')
+            .from('#heroStats .stat', { y: 20, opacity: 0, stagger: 0.1, duration: 0.4 }, '-=0.2');
+
+      // Animate elements on scroll
+      document.querySelectorAll('[data-anim]').forEach(el => {
+        const anim = el.getAttribute('data-anim');
+        const delay = parseInt(el.getAttribute('data-delay')) || 0;
+        const vars = {
+          opacity: 0,
+          duration: 0.7,
+          ease: 'power2.out',
+          scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' }
+        };
+        if (anim === 'fade-up') vars.y = 40;
+        else if (anim === 'fade-right') vars.x = -40;
+        else if (anim === 'fade-left') vars.x = 40;
+        vars.delay = delay / 1000;
+        gsap.from(el, vars);
+      });
+
+      // Timeline for project cards stagger
+      const cards = gsap.utils.toArray('.project-card');
+      cards.forEach((card, i) => {
+        gsap.from(card, {
+          y: 60, opacity: 0, duration: 0.8, ease: 'power2.out',
+          scrollTrigger: { trigger: card, start: 'top 80%', toggleActions: 'play none none none' },
+          delay: i * 0.15
+        });
+      });
+
+      // Tech categories stagger
+      gsap.from('.tech-cat', {
+        y: 40, opacity: 0, duration: 0.6, ease: 'power2.out',
+        stagger: 0.1,
+        scrollTrigger: { trigger: '.tech__grid', start: 'top 80%', toggleActions: 'play none none none' }
+      });
+
+      // Contact fade
+      gsap.from('.contact__grid', {
+        y: 50, opacity: 0, duration: 0.8, ease: 'power2.out',
+        scrollTrigger: { trigger: '.contact__grid', start: 'top 80%', toggleActions: 'play none none none' }
+      });
+
+      // Nav blur on scroll
+      ScrollTrigger.create({
+        start: 'top -80px',
+        onUpdate: self => {
+          document.getElementById('nav').style.backdropFilter = self.progress > 0 
+            ? 'blur(12px)' : 'blur(0px)';
+          document.getElementById('nav').style.borderBottomColor = self.progress > 0
+            ? 'rgba(255,255,255,0.06)' : 'transparent';
+        }
       });
     }
+
+    // Wait for GSAP scripts to load
+    if (document.querySelector('script[src*="gsap"]')) {
+      document.querySelector('script[src*="gsap"]').onload = initGSAP;
+    }
+
+    // === VIDEO MODAL ===
+    const modal = document.getElementById('videoModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalContainer = document.getElementById('modalVideoContainer');
+
+    document.querySelectorAll('.video-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const videoId = this.getAttribute('data-video-id');
+        modal.classList.add('modal--open');
+        document.body.style.overflow = 'hidden';
+        
+        // Here you'll replace with YouTube iframe when you upload videos
+        modalContainer.innerHTML = `
+          <div class="video-placeholder-inner">
+            <i data-lucide="film" class="vp-icon"></i>
+            <p>Video: ${videoId}</p>
+            <p class="vp-sub">Cuando subas el video a YouTube (No listado), edita el HTML con el ID del video.</p>
+          </div>
+        `;
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('modal--open');
+      document.body.style.overflow = '';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modal.querySelector('.modal__overlay').addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // === CONTACT FORM (dummy - will integrate later) ===
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i data-lucide="check" class="btn__icon"></i> Mensaje enviado';
+      btn.disabled = true;
+      btn.style.background = '#16a34a';
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+      setTimeout(() => {
+        btn.innerHTML = orig;
+        btn.disabled = false;
+        btn.style.background = '';
+        this.reset();
+      }, 3000);
+    });
   });
-</script>
+  </script>
+</body>
 </html>
