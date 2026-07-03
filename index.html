@@ -497,28 +497,38 @@
     const modal = document.getElementById('videoModal');
     const modalClose = document.getElementById('modalClose');
     const modalContainer = document.getElementById('modalVideoContainer');
+    const videoMap = {
+      'video1-proj1': { id: 'vertccQbUMA', title: 'Demo — Asistente de Ventas Automático' },
+      'video1-proj2': { id: 'xOMIeSe86sI', title: 'Demo Corta — Narración Deportiva IA' },
+      'video2-proj2': { id: 'kP1meMWeYWg', title: 'Video Completo — Narración + Visión' },
+      'video1-proj3': { id: 'YJS61u8skLw', title: 'Demo — Coordinación de Personal' }
+    };
 
     document.querySelectorAll('.video-btn').forEach(btn => {
       btn.addEventListener('click', function() {
-        const videoId = this.getAttribute('data-video-id');
+        const key = this.getAttribute('data-video-id');
+        const video = videoMap[key];
         modal.classList.add('modal--open');
         document.body.style.overflow = 'hidden';
-        
-        // Here you'll replace with YouTube iframe when you upload videos
-        modalContainer.innerHTML = `
-          <div class="video-placeholder-inner">
-            <i data-lucide="film" class="vp-icon"></i>
-            <p>Video: ${videoId}</p>
-            <p class="vp-sub">Cuando subas el video a YouTube (No listado), edita el HTML con el ID del video.</p>
-          </div>
-        `;
-        if (typeof lucide !== 'undefined') lucide.createIcons();
+
+        if (video) {
+          modalContainer.innerHTML = `
+            <iframe
+              src="https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0&showinfo=0&modestbranding=1"
+              title="${video.title}"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+            ></iframe>
+          `;
+        }
       });
     });
 
     function closeModal() {
       modal.classList.remove('modal--open');
       document.body.style.overflow = '';
+      modalContainer.innerHTML = ''; // stop video
     }
 
     modalClose.addEventListener('click', closeModal);
