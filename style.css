@@ -396,21 +396,28 @@ img { max-width: 100%; }
 
 .project-card__results {
   padding: 0;
+  margin: 0;
 }
 .project-card__results li {
   font-size: 0.85rem;
   color: #a1a1aa;
-  margin-bottom: 0.3rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.3rem;
+  margin-bottom: 0.4rem;
+  display: grid;
+  grid-template-columns: 1.2em 1fr;
+  gap: 0.35rem;
+  line-height: 1.4;
+}
+
+.project-card__results li:last-child {
+  margin-bottom: 0;
 }
 .check-icon {
   width: 1em;
   height: 1em;
   color: #22c55e;
   flex-shrink: 0;
-  margin-top: 0.15em;
+  margin-top: 0.2em;
+  justify-self: center;
 }
 
 .project-card__tech {
