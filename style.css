@@ -397,6 +397,14 @@ img { max-width: 100%; }
 }
 .video-btn__icon { width: 1.1em; height: 1.1em; }
 
+.quality-note {
+  display: block;
+  width: 100%;
+  font-size: 0.72rem;
+  color: #52525b;
+  margin-top: 0.3rem;
+}
+
 /* === TECHNOLOGIES === */
 .tech {
   max-width: 880px;

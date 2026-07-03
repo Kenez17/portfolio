@@ -10,7 +10,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://portfolio-omega-nine-28.vercel.app/" />
   <link rel="canonical" href="https://portfolio-omega-nine-28.vercel.app/" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>⚡</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0b'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='800' text-anchor='middle' fill='%2322c55e'%3EK%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="style.css" />
   <!-- Lucide -->
   <script src="https://unpkg.com/lucide@latest" defer></script>
@@ -157,6 +157,7 @@
             <i data-lucide="play-circle" class="video-btn__icon"></i>
             Ver demo
           </button>
+          <span class="quality-note">Al reproducir, ajusta la calidad ⚙️ a HD en YouTube</span>
         </div>
       </div>
     </article>
@@ -211,6 +212,7 @@
             <i data-lucide="code" class="video-btn__icon"></i>
             Video Técnico Completo (Narración + Visión)
           </button>
+          <span class="quality-note">Al reproducir, ajusta la calidad ⚙️ a HD en YouTube</span>
         </div>
       </div>
     </article>
@@ -259,6 +261,7 @@
             <i data-lucide="play-circle" class="video-btn__icon"></i>
             Ver demo del sistema
           </button>
+          <span class="quality-note">Al reproducir, ajusta la calidad ⚙️ a HD en YouTube</span>
         </div>
       </div>
     </article>
@@ -514,7 +517,7 @@
         if (video) {
           modalContainer.innerHTML = `
             <iframe
-              src="https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0&showinfo=0&modestbranding=1"
+              src="https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0&showinfo=0&modestbranding=1&vq=hd1080"
               title="${video.title}"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
